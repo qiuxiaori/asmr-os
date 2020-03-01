@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "egg": "^2.15.1",
+    "egg-mongoose": "^3.2.0",
     "egg-scripts": "^2.11.0"
   },
   "devDependencies": {
@@ -23,7 +24,7 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-asmr-os",
+    "start": "egg-scripts start --title=egg-server-asmr-os",
     "stop": "egg-scripts stop --title=egg-server-asmr-os",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
