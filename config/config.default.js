@@ -27,14 +27,10 @@ module.exports = appInfo => {
   config.mongoose = {
     url: process.env.EGG_MONGODB_URL || 'mongodb://127.0.0.1:27017/asmr-dev',
     options: {
-      user: 'qxr1',
-      pass: '777521',
-      // dbName: 'asmr-dev',
       server: {
         poolSize: 40,
       },
     },
-    // plugins: [ 'mongoose' ],
   };
   config.security = {
     csrf: {
