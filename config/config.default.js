@@ -34,12 +34,23 @@ module.exports = appInfo => {
   }
   config.security = {
     csrf: {
+      enable: false
+    }
+  }
+  config.security = {
+    csrf: {
       enable: false,
-    },
-  };
+      ignoreJSON: true
+    }
+  }
+
+  config.cors = {
+    origin: '*',
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+  }
 
   return {
     ...config,
-    ...userConfig,
+    ...userConfig
   };
 };
