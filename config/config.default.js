@@ -25,13 +25,13 @@ module.exports = appInfo => {
 
   // db config
   config.mongoose = {
-    url: process.env.EGG_MONGODB_URL || 'mongodb://127.0.0.1:27017/asmr-dev',
+    url: process.env.EGG_MONGODB_URL || 'mongodb://127.0.0.1:27017/game-dev',
     options: {
       server: {
-        poolSize: 40,
-      },
-    },
-  };
+        poolSize: 40
+      }
+    }
+  }
   config.security = {
     csrf: {
       enable: false,
