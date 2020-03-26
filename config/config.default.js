@@ -28,29 +28,29 @@ module.exports = appInfo => {
     url: process.env.EGG_MONGODB_URL || 'mongodb://127.0.0.1:27017/game-dev',
     options: {
       server: {
-        poolSize: 40
-      }
-    }
-  }
-  config.security = {
-    csrf: {
-      enable: false
-    }
-  }
+        poolSize: 40,
+      },
+    },
+  };
   config.security = {
     csrf: {
       enable: false,
-      ignoreJSON: true
-    }
-  }
+    },
+  };
+  config.security = {
+    csrf: {
+      enable: false,
+      ignoreJSON: true,
+    },
+  };
 
   config.cors = {
     origin: '*',
-    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
-  }
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
+  };
 
   return {
     ...config,
-    ...userConfig
+    ...userConfig,
   };
 };
